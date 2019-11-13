@@ -13,21 +13,26 @@
 <body>
   <header>
     <navigation class="navigation">
-      <input type="text" class="navigation__input" placeholder="text">
+      <input type="text" class="navigation__input" placeholder="Czego szukasz?">
       <button class="navigation__searcht">Enter</button>
-      <h1 class="navigation__title"></h1>
-      <button class="navigation__up">Go Up</button>
+      <h1 class="navigation__title">TODO LIST</h1>
+      <button class="navigation__up">Do góry</button>
     </navigation>
 
-    <body>
+    <body class="bodyGrid">
       <section class="todoWrapper">
-        <ul class="todo">
+        <ul class="todo" id="todo">
           <li class="todo__item">
-            nazwa, numer, tresc, przycisk dodania nowego
+            <div class="todo__wrapper">
+              <p class="todo__position">1</p>
+              <h1 class="todo__title">pierwszy element</h1>
+              <button class="delete">X</button>
+            </div>
+            <textarea name="" id="" cols="60" rows="10" class="content"></textarea>
           </li>
         </ul>
       </section>
-      <button class="newTodo">Add new</button>
+      <button class="newTodo">Dodaj</button>
     </body>
     <footer class="footer">
 

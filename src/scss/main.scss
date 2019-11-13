@@ -1,11 +1,45 @@
 @import "_normalize";
 @import "_variables";
-
+@import "_mixins";
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
+}
+
+body {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.todo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  &__item {
+    list-style: none;
+  }
+  &__wrapper{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__position {
+    border: 1px solid red;
+    border-radius: 25px;
+    grid-area: position;
+  }
+  &__title {
+    border: 1px solid blue;
+    grid-area: title;
+  }
+  .content{
+    grid-area: content;
+  }
 }

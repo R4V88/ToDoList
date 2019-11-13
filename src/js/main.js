@@ -14,8 +14,15 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// place your code below
+let buttonAdd = document.querySelector('.newTodo');
+let buttonUp = document.querySelector('.navigation__up');
+
+buttonAdd.addEventListener('click', addItem);
+
+function addItem(){
+  let liLength = document.getElementById("#todo");
+  console.log(liLength);
+}
 
 
-
-
+addItem();
