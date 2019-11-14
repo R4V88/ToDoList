@@ -28,19 +28,16 @@ let listitems = todolist.getElementsByTagName('todo__item');
 addForm.addEventListener('submit', addItem);
 
 let finalPos;
-function position () {
+function getPosition () {
   for (let i = 0; i < listitems.length; i++) {
     finalPos += i;
   }
   return finalPos;
 }
 
-
 function addItem(e) {
   e.preventDefault();
-
-  position();
-
+  getPosition();
 
   let title = document.getElementById('addForm__title').value;
   let content = document.getElementById('addForm__content').value;
@@ -54,7 +51,7 @@ function addItem(e) {
 
   let createPos = document.createElement('p');
   createPos.className = 'todo__position';
-  createPos.appendChild(document.createTextNode(finalPos));
+  createPos.appendChild(document.createTextNode(getPosition(finalPos)));
 
   let createH1 = document.createElement('h1');
   createH1.classList.add('todo__title');
@@ -68,6 +65,7 @@ function addItem(e) {
   createP.classList.add('todo__content');
   createP.appendChild(document.createTextNode(content));
 
+  createDiv.appendChild(createPos);
   createDiv.appendChild(createH1);
   createDiv.appendChild(createBtn);
 
@@ -76,7 +74,7 @@ function addItem(e) {
 
   todolist.appendChild(createLi);
 
-  console.log(createPos);
-  console.log(position());
+  // console.log(createPos);
+  // console.log(position());
 }
 
