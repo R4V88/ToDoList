@@ -22,21 +22,23 @@ if ('serviceWorker' in navigator) {
 
 let addForm = document.querySelector('.addForm');
 let todolist = document.querySelector('.todo');
-let listitems = todolist.getElementsByTagName('todo__item');
-
+let listitems = todolist.getElementsByClassName('todo__item');
 
 addForm.addEventListener('submit', addItem);
 
 let finalPos;
 function getPosition () {
-  for (let i = 0; i < listitems.length; i++) {
+  // let finalPos;
+  for (let i = 0; i <= listitems.length; i++) {
     finalPos += i;
   }
   return finalPos;
 }
 
+
 function addItem(e) {
   e.preventDefault();
+
   getPosition();
 
   let title = document.getElementById('addForm__title').value;
@@ -51,7 +53,7 @@ function addItem(e) {
 
   let createPos = document.createElement('p');
   createPos.className = 'todo__position';
-  createPos.appendChild(document.createTextNode(getPosition(finalPos)));
+  createPos.appendChild(document.createTextNode(getPosition()));
 
   let createH1 = document.createElement('h1');
   createH1.classList.add('todo__title');
@@ -77,4 +79,5 @@ function addItem(e) {
   // console.log(createPos);
   // console.log(position());
 }
+console.log(listitems.length);
 
