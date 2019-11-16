@@ -369,7 +369,13 @@ header {
   .navigation__title {
     font-size: 50px;
     text-transform: uppercase;
-    letter-spacing: 5px; }
+    letter-spacing: 5px;
+    background: -webkit-gradient(linear, left top, right top, from(yellow), to(green));
+    background: -webkit-linear-gradient(left, yellow, green);
+    background: -o-linear-gradient(left, yellow, green);
+    background: linear-gradient(to right, yellow, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 main {
   width: 100%; }
@@ -407,7 +413,8 @@ main {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    padding-bottom: 5px; }
   .addForm__content {
     margin: 0;
     padding: 0; }
@@ -432,7 +439,6 @@ main {
   .todo__index {
     border: 1px solid red;
     border-radius: 25px;
-    grid-area: position;
     height: 50px;
     width: 50px;
     display: -webkit-box;
@@ -446,16 +452,23 @@ main {
             align-items: center;
     font-weight: bold;
     font-size: 24px; }
-  .todo__title {
-    border: 1px solid blue;
-    grid-area: title; }
-  .todo__delete {
+  .todo__deleteBtn {
     height: 50px;
     width: 50px;
     border: 1px solid red;
     border-radius: 25px; }
   .todo__content {
-    grid-area: content;
     margin: 0 15px; }
+  .todo__date {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
