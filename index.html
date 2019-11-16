@@ -13,36 +13,39 @@
 <body>
   <header>
     <navigation class="navigation">
+      <div class="navigation__searchTool">
       <input type="text" class="navigation__input" placeholder="Czego szukasz?">
-      <button class="navigation__searcht">Enter</button>
-      <h1 class="navigation__title">TODO LIST</h1>
-      <!-- <button class="navigation__up">Do góry</button> -->
+        <button class="navigation__searcht">Szukaj</button>
+      </div>
+        <h1 class="navigation__title">TODO LIST</h1>
+        <!-- <button class="navigation__up">Do góry</button> -->
     </navigation>
+  </header>
 
-    <body class="bodyGrid">
+  <body class="bodyGrid">
 
-      <form class="addForm" id="addForm">
-        <input class="addForm__title" id="addForm__title" type="text" id="addForm__title" placeholder="TYTUł">
-        <textarea class="addForm__content" id="addForm__content" cols="60" rows="10">
+    <form class="addForm" id="addForm">
+      <input class="addForm__title" id="addForm__title" type="text" id="addForm__title" placeholder="TYTUł">
+      <textarea class="addForm__content" id="addForm__content" cols="60" rows="10">
         </textarea>
-        <input type="submit" class="addForm__submit" value="Submit">
-      </form>
-      <section class="todoWrapper">
-        <ul class="todo" id="todo">
-          <!-- <li class="todo__item" id="todo__item">
-            <div class="todo__wrapper">
-              <p class="todo__position">1</p>
-              <h1 class="todo__title">pierwszy element</h1>
-              <button class="todo__delete">X</button>
-            </div>
-            <p class="todo__content"></p>
-          </li> -->
-        </ul>
-      </section>
-    </body>
-    <footer class="footer">
+      <input type="submit" class="addForm__submit" value="Submit">
+    </form>
+    <section class="todoWrapper">
+      <ul class="todo" id="todo">
+        <li class="todo__item" id="todo__item">
+          <div class="todo__wrapper">
+            <p class="todo__position">1</p>
+            <h1 class="todo__title">pierwszy element</h1>
+            <button class="todo__delete">X</button>
+          </div>
+          <p class="todo__content"></p>
+        </li>
+      </ul>
+    </section>
+  </body>
+  <footer class="footer">
 
-    </footer>
+  </footer>
   </header>
   <script src="js/main.js"></script>
 </body>
