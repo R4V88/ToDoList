@@ -11,7 +11,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
 body {
   max-width: 800px;
   width: 100%;
@@ -37,21 +36,24 @@ header {
     width: 100%;
     justify-content: flex-start;
   }
-  &__input{
+  &__input {
     width: 250px;
   }
   &__title {
     font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 5px;
+    background: linear-gradient(to right, yellow, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
 main {
   width: 100%;
 }
-.formWrapper{
-  width:100%;
+.formWrapper {
+  width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 100px;
@@ -63,21 +65,20 @@ main {
   justify-content: center;
   align-items: center;
   margin: 0;
-  &__inputsWrapper{
+  &__inputsWrapper {
     width: 459.5px;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 5px;
   }
-  &__content{
-    margin:0;
-    padding:0;
+  &__content {
+    margin: 0;
+    padding: 0;
   }
 }
 
 .todo {
   width: 100%;
-  // display: flex;
-  // justify-content: ;
   padding: 0;
   &__item {
     list-style: none;
@@ -87,32 +88,34 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 15px
+    padding-bottom: 15px;
   }
   &__index {
     border: 1px solid red;
     border-radius: 25px;
-    grid-area: position;
     height: 50px;
     width: 50px;
-    display:flex;
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     font-weight: bold;
     font-size: 24px;
   }
   &__title {
-    border: 1px solid blue;
-    grid-area: title;
   }
-  &__delete{
-    height:50px;
-    width:50px;
+  &__deleteBtn {
+    height: 50px;
+    width: 50px;
     border: 1px solid red;
     border-radius: 25px;
   }
   &__content {
-    grid-area: content;
     margin: 0 15px;
+  }
+  &__date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

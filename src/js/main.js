@@ -55,12 +55,17 @@ function addItem(e) {
   createP.classList.add('todo__content');
   createP.appendChild(document.createTextNode(content));
 
+  let createDate = document.createElement('p');
+  createDate.className = 'todo__date';
+  createDate.appendChild(document.createTextNode('Tu bedzie data'));
+
   createDiv.appendChild(createPos);
   createDiv.appendChild(createH1);
   createDiv.appendChild(createBtn);
 
   createLi.appendChild(createDiv);
   createLi.appendChild(createP);
+  createLi.appendChild(createDate);
 
   todolist.appendChild(createLi);
 
