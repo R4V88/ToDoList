@@ -307,6 +307,22 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes backgroundChange {
+  0% {
+    background-color: #ffff00; }
+  50% {
+    background-color: #00ff00; }
+  100% {
+    background-color: #ffff00; } }
+
+@keyframes backgroundChange {
+  0% {
+    background-color: #ffff00; }
+  50% {
+    background-color: #00ff00; }
+  100% {
+    background-color: #ffff00; } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -370,12 +386,14 @@ header {
     font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    background: -webkit-gradient(linear, left top, right top, from(yellow), to(green));
-    background: -webkit-linear-gradient(left, yellow, green);
-    background: -o-linear-gradient(left, yellow, green);
-    background: linear-gradient(to right, yellow, green);
+    background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
+    background: -webkit-linear-gradient(left, #ffff00, #00ff00);
+    background: -o-linear-gradient(left, #ffff00, #00ff00);
+    background: linear-gradient(to right, #ffff00, #00ff00);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px; }
 
 main {
   width: 100%; }
@@ -417,7 +435,9 @@ main {
     padding-bottom: 5px; }
   .addForm__content {
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    -webkit-animation: backgroundChange 10s ease-in-out infinite;
+            animation: backgroundChange 10s ease-in-out infinite; }
 
 .todo {
   width: 100%;
@@ -437,7 +457,10 @@ main {
             align-items: center;
     padding-bottom: 15px; }
   .todo__index {
-    border: 1px solid red;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #ffff00;
     border-radius: 25px;
     height: 50px;
     width: 50px;
@@ -451,12 +474,33 @@ main {
         -ms-flex-align: center;
             align-items: center;
     font-weight: bold;
-    font-size: 24px; }
+    font-size: 24px;
+    -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+    .todo__index:hover {
+      background-color: #00ff00;
+      -webkit-transform: scale(1.15);
+          -ms-transform: scale(1.15);
+              transform: scale(1.15); }
   .todo__deleteBtn {
     height: 50px;
     width: 50px;
-    border: 1px solid red;
-    border-radius: 25px; }
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #00ff00;
+    -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+    .todo__deleteBtn:hover {
+      background-color: #ffff00;
+      -webkit-transform: scale(1.15);
+          -ms-transform: scale(1.15);
+              transform: scale(1.15); }
   .todo__content {
     margin: 0 15px; }
   .todo__date {
