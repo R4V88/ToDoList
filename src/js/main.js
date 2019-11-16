@@ -48,7 +48,7 @@ function addItem(e) {
   createH1.appendChild(document.createTextNode(title));
 
   let createBtn = document.createElement('button');
-  createBtn.classList.add('todo__delete');
+  createBtn.classList.add('todo__deleteBtn');
   createBtn.appendChild(document.createTextNode('X'));
 
   let createP = document.createElement('p');
@@ -68,6 +68,5 @@ function addItem(e) {
   createLi.appendChild(createDate);
 
   todolist.appendChild(createLi);
-
 }
 
