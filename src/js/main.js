@@ -26,20 +26,8 @@ let listitems = todolist.getElementsByClassName('todo__item');
 
 addForm.addEventListener('submit', addItem);
 
-// let finalPos;
-// function getPosition () {
-//   // let finalPos;
-//   for (let i = 0; i <= listitems.length; i++) {
-//     finalPos += i;
-//   }
-//   return finalPos;
-// }
-
-
 function addItem(e) {
   e.preventDefault();
-
-  // getPosition();
 
   let title = document.getElementById('addForm__title').value;
   let content = document.getElementById('addForm__content').value;
@@ -76,8 +64,5 @@ function addItem(e) {
 
   todolist.appendChild(createLi);
 
-  console.log(getPosition());
-  // console.log(createPos);
-  // console.log(position());
 }
 

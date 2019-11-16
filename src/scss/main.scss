@@ -16,17 +16,49 @@ body {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: 100%;
+  &__searchTool {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  &__title {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+}
+
+.addForm {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
 }
 
 .todo {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: ;
   padding: 0;
   &__item {
     list-style: none;
   }
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-around;
   }
@@ -39,7 +71,7 @@ body {
     border: 1px solid blue;
     grid-area: title;
   }
-  &__content{
+  &__content {
     grid-area: content;
   }
 }
