@@ -24,7 +24,7 @@ body {
 header {
   display: flex;
   justify-content: flex-start;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 .navigation {
   display: flex;
@@ -37,6 +37,9 @@ header {
     width: 100%;
     justify-content: flex-start;
   }
+  &__input{
+    width: 250px;
+  }
   &__title {
     font-size: 50px;
     text-transform: uppercase;
@@ -44,10 +47,31 @@ header {
   }
 }
 
+main {
+  width: 100%;
+}
+.formWrapper{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
 .addForm {
-  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  &__inputsWrapper{
+    width: 459.5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content{
+    margin:0;
+    padding:0;
+  }
 }
 
 .todo {
@@ -57,21 +81,38 @@ header {
   padding: 0;
   &__item {
     list-style: none;
+    padding: 0 0 50px 0;
   }
   &__wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px
   }
-  &__position {
+  &__index {
     border: 1px solid red;
     border-radius: 25px;
     grid-area: position;
+    height: 50px;
+    width: 50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+    font-size: 24px;
   }
   &__title {
     border: 1px solid blue;
     grid-area: title;
   }
+  &__delete{
+    height:50px;
+    width:50px;
+    border: 1px solid red;
+    border-radius: 25px;
+  }
   &__content {
     grid-area: content;
+    margin: 0 15px;
   }
 }

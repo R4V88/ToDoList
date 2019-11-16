@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Site title</title>
+  <title>ToDo Lista</title>
   <meta name="description" content="Description" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -14,40 +14,44 @@
   <header>
     <navigation class="navigation">
       <div class="navigation__searchTool">
-      <input type="text" class="navigation__input" placeholder="Czego szukasz?">
+        <input type="text" class="navigation__input" placeholder="Czego szukasz? Wpisz tytuł zadania">
         <button class="navigation__searcht">Szukaj</button>
       </div>
-        <h1 class="navigation__title">TODO LIST</h1>
-        <!-- <button class="navigation__up">Do góry</button> -->
+      <h1 class="navigation__title">TODO LIST</h1>
+      <!-- <button class="navigation__up">Do góry</button> -->
     </navigation>
   </header>
 
   <body class="bodyGrid">
     <main>
-    <form class="addForm" id="addForm">
-      <input class="addForm__title" id="addForm__title" type="text" id="addForm__title" placeholder="TYTUł">
-      <textarea class="addForm__content" id="addForm__content" cols="60" rows="10">
-        </textarea>
-      <input type="submit" class="addForm__submit" value="Submit">
-    </form>
-    <section class="todoWrapper">
-      <ul class="todo" id="todo">
-        <li class="todo__item" id="todo__item">
-          <div class="todo__wrapper">
-            <p class="todo__position">1</p>
-            <h1 class="todo__title">pierwszy element</h1>
-            <button class="todo__delete">X</button>
+      <div class="formWrapper">
+        <form class="addForm" id="addForm">
+          <div class="addForm__inputsWrapper">
+            <input class="addForm__title" id="addForm__title" type="text" id="addForm__title" placeholder="Tytuł">
+            <input type="submit" class="addForm__submit" value="Dopisz">
           </div>
-          <p class="todo__content"></p>
-        </li>
-      </ul>
-    </section>
-  </main>
- 
-  <footer class="footer">
+          <textarea class="addForm__content" id="addForm__content" cols="50" rows="8">
+          </textarea>
+        </form>
+      </div>
+      <section class="todoWrapper">
+        <ul class="todo" id="todo">
+          <li class="todo__item" id="todo__item">
+            <div class="todo__wrapper">
+              <p class="todo__index">1</p>
+              <h1 class="todo__title">pierwszy element</h1>
+              <button class="todo__delete">X</button>
+            </div>
+            <p class="todo__content">Consequat nisi fugiat sunt ipsum fugiat pariatur magna nostrud fugiat nisi tempor minim. Nostrud est cillum id laboris incididunt enim. Ex est quis sunt veniam reprehenderit sint ipsum elit dolore. Nisi eu aliquip eu veniam aute anim labore pariatur officia in minim non.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-  </footer>
-  <script src="js/main.js"></script>
-</body>
+    <footer class="footer">
+
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 
 </html>

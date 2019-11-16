@@ -40,7 +40,7 @@ function addItem(e) {
   createDiv.classList.add('todo__wrapper');
 
   let createPos = document.createElement('p');
-  createPos.className = 'todo__position';
+  createPos.className = 'todo__index';
   createPos.appendChild(document.createTextNode(listitems.length + 1));
 
   let createH1 = document.createElement('h1');
