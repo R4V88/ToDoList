@@ -1,7 +1,11 @@
 # Project screenshot
-![ToDo List](/assets/img/ToDo_list.png)
+<img src="src/assets/img/ToDo_list.png"
+     alt="ToDo List Screenshot"
+     width="450" height="300" />
 
 
+Simple TODO list with adding/deleting/searching functions.\
+Technologies used: HTML5, CSS3, Vanilla JavaScript
 
 # How to use Gulp
 
