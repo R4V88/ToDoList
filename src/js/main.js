@@ -19,12 +19,12 @@ if ('serviceWorker' in navigator) {
 import moment from 'moment';
 
 const addForm = document.querySelector('.addForm');
-const todolist = document.querySelector('.todo');
-const listitems = todolist.getElementsByClassName('todo__item');
+const todoList = document.querySelector('.todo');
+const listItems = todoList.getElementsByClassName('todo__item');
 const search = document.querySelector('.navigation__input');
 
 addForm.addEventListener('submit', addItem);
-todolist.addEventListener('click', removeItem);
+todoList.addEventListener('click', removeItem);
 search.addEventListener('keyup', searchItems);
 
 
@@ -46,7 +46,7 @@ function addItem(e) {
 
   // const createIndex = document.createElement('p');
   // createIndex.className = 'todo__index';
-  // createIndex.appendChild(document.createTextNode(listitems.length + 1));
+  // createIndex.appendChild(document.createTextNode(listItems).length + 1));
   // createNewIndex();
 
   // const createTitle = document.createElement('h1');
@@ -79,17 +79,17 @@ function addItem(e) {
   // createItem.appendChild(createDate);
   // createNewItem();
 
-  // todolist.appendChild(createItem);
+  // todoList.appendChild(createItem);
 
-  createNewLi(todolist);
+  createNewLi(todoList);
 }
 
-const createNewLi = (todolist) => {
+const createNewLi = (todoList) => {
   const item = createNewItem();
 
-  todolist.appendChild(item);
+  todoList.appendChild(item);
 
-  return todolist;
+  return todoList;
 }
 const createNewItem = () => {
   const createItem = document.createElement('li');
@@ -123,7 +123,7 @@ const createNewWrapper = () => {
 const createNewIndex = () => {
   const createIndex = document.createElement('p');
   createIndex.className = 'todo__index';
-  createIndex.appendChild(document.createTextNode(listitems.length + 1));
+  createIndex.appendChild(document.createTextNode(listItems.length + 1));
   return createIndex;
 }
 const createNewTitle = () => {
@@ -165,14 +165,13 @@ function removeItem(e) {
   if (e.target.classList.contains('todo__deleteBtn')) {
     if (confirm('Na pewno chcesz usunac ten element?')) {
       const element = e.target.parentElement.parentElement;
-      todolist.removeChild(element);
+      todoList.removeChild(element);
     }
   }
 }
 function searchItems (e) {
   const text = e.target.value.toLowerCase;
-  const items = listitems;
-  Array.from(items).forEach((item) => {
+  Array.from(listItems).forEach((item) => {
     const itemTitle = item.firstElementChild.firstElementChild.nextElementSibling.textContent;
     if(itemTitle.toLowerCase().indexOf(text) != -1){
       item.style.display = 'block';
