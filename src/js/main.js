@@ -21,15 +21,17 @@ const addForm = document.querySelector('.addForm');
 const todoList = document.querySelector('.todo');
 const listItems = todoList.getElementsByClassName('todo__item');
 const search = document.querySelector('.navigation__input');
+const goUpBtn = document.querySelector('.navigation__up--js');
 
 addForm.addEventListener('submit', addItem);
 todoList.addEventListener('click', removeItem);
 search.addEventListener('keyup', searchItems);
+goUpBtn.addEventListener('click', goToTop);
 
 //Function to add item to the list
 function addItem(e) {
   e.preventDefault();
-  
+
   const item = createNewItem();
   todoList.appendChild(item);
 }
@@ -117,3 +119,8 @@ function searchItems (e) {
   })
 }
 
+function goToTop(e) {
+  if(e.target.classList.contains('navigation__up--js')){
+    document.documentElement.scrollTop = 0;
+  }
+}

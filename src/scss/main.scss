@@ -43,6 +43,14 @@ header {
   justify-content: center;
   flex-direction: column-reverse;
   width: 100%;
+  &__up{
+    text-transform: uppercase;
+    @include borderRadius25px;
+    background: $gradientBackground;
+    position: fixed;
+    bottom: 100px;
+    right: 80px;
+  }
   &__searchTool {
     display: flex;
     width: 100%;
