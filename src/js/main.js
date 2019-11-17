@@ -14,15 +14,13 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-
-
-
-
 //Od Tego miejsca
 
-let addForm = document.querySelector('.addForm');
-let todolist = document.querySelector('.todo');
-let listitems = todolist.getElementsByClassName('todo__item');
+import moment from 'moment';
+
+const addForm = document.querySelector('.addForm');
+const todolist = document.querySelector('.todo');
+const listitems = todolist.getElementsByClassName('todo__item');
 
 addForm.addEventListener('submit', addItem);
 todolist.addEventListener('click', removeItem);
@@ -30,56 +28,58 @@ todolist.addEventListener('click', removeItem);
 function addItem(e) {
   e.preventDefault();
 
-  let title = document.getElementById('addForm__title').value;
-  let content = document.getElementById('addForm__content').value;
-  let moment = require('moment');
-  let date = new Date();
-  let momentDate = moment(date).format('L');
+  const title = document.getElementById('addForm__title').value;
+  const content = document.getElementById('addForm__content').value;
 
-  let createLi = document.createElement('li');
-  createLi.classList.add('todo__item');
-  createLi.setAttribute('id', 'todo__item');
+  const createItem = document.createElement('li');
+  createItem.classList.add('todo__item');
+  createItem.setAttribute('id', 'todo__item');
 
-  let createDiv = document.createElement('div');
-  createDiv.classList.add('todo__wrapper');
+  const createWrapper = document.createElement('div');
+  createWrapper.classList.add('todo__wrapper');
 
-  let createPos = document.createElement('p');
-  createPos.className = 'todo__index';
-  createPos.appendChild(document.createTextNode(listitems.length + 1));
+  const createIndex = document.createElement('p');
+  createIndex.className = 'todo__index';
+  createIndex.appendChild(document.createTextNode(listitems.length + 1));
 
-  let createH1 = document.createElement('h1');
-  createH1.classList.add('todo__title');
-  createH1.appendChild(document.createTextNode(title));
+  const createTitle = document.createElement('h1');
+  createTitle.classList.add('todo__title');
+  createTitle.appendChild(document.createTextNode(title));
 
-  let createBtn = document.createElement('button');
-  createBtn.classList.add('todo__deleteBtn');
-  createBtn.appendChild(document.createTextNode('X'));
+  const createDeleteBtn = document.createElement('button');
+  createDeleteBtn.classList.add('todo__deleteBtn');
+  createDeleteBtn.appendChild(document.createTextNode('X'));
 
-  let createP = document.createElement('p');
-  createP.classList.add('todo__content');
-  createP.appendChild(document.createTextNode(content));
+  const createContent = document.createElement('p');
+  createContent.classList.add('todo__content');
+  createContent.appendChild(document.createTextNode(content));
 
-  let createDate = document.createElement('p');
+  const createDate = document.createElement('p');
   createDate.className = 'todo__date';
-  createDate.appendChild(document.createTextNode(momentDate));
+  createDate.appendChild(document.createTextNode(momentDate()));
 
-  createDiv.appendChild(createPos);
-  createDiv.appendChild(createH1);
-  createDiv.appendChild(createBtn);
+  createWrapper.appendChild(createIndex);
+  createWrapper.appendChild(createTitle);
+  createWrapper.appendChild(createDeleteBtn);
 
-  createLi.appendChild(createDiv);
-  createLi.appendChild(createP);
-  createLi.appendChild(createDate);
+  createItem.appendChild(createWrapper);
+  createItem.appendChild(createContent);
+  createItem.appendChild(createDate);
 
-  todolist.appendChild(createLi);
+  todolist.appendChild(createItem);
 }
 
 function removeItem(e) {
-  if(e.target.classList.contains('todo__deleteBtn')){
-    if(confirm('Na pewno chcesz usunac ten element?')){
-      var element = e.target.parentElement.parentElement;
+  if (e.target.classList.contains('todo__deleteBtn')) {
+    if (confirm('Na pewno chcesz usunac ten element?')) {
+      const element = e.target.parentElement.parentElement;
       todolist.removeChild(element);
     }
   }
 }
 
+const momentDate = () => {
+  const date = new Date();
+  const formatedDate = moment(date).format('L');
+  return formatedDate;
+}
