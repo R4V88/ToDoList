@@ -1,0 +1,15 @@
+@import "_variables";
+
+@mixin BorderRadius5px {
+    border-radius: 5px;
+    border: 1px solid $black;
+}
+
+@mixin borderRadius25px{
+    border: 1px solid $black;
+    border-radius: 25px;
+}
+
+@mixin border {
+    border: 1px solid $black;
+}

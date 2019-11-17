@@ -4,13 +4,13 @@
 
 @keyframes backgroundChange {
   0% {
-    background-color: #ffff00;
+    background-color: $yellow;
   }
   50% {
-    background-color: #00ff00;
+    background-color: $green;
   }
   100% {
-    background-color: #ffff00;
+    background-color: $yellow;
   }
 }
 
@@ -52,16 +52,16 @@ header {
     width: 250px;
     border-radius: 5px;
     margin-right: 10px;
-    border: 1px solid #000000;
+    border: 1px solid $black;
   }
   &__title {
     font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 5px;
-    background: linear-gradient(to right, #ffff00, #00ff00);
+    background: $gradientBackground;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: #000000;
+    -webkit-text-stroke-color: $black;
     -webkit-text-stroke-width: 1px;
   }
 }
@@ -90,18 +90,25 @@ main {
   }
   &__title {
     border-radius: 5px;
-    border: 1px solid #000000;
+    border: 1px solid $black;
   }
   &__submitBtn {
-    border-radius: 5px;
-    // border: 1px solid black;
+    @include BorderRadius5px;
+    background: $gradientBackground;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    &:hover{
+      transform: scale(1.15);
+    }
+    &:active {
+      background: $white;
+    }
   }
   &__content {
     margin: 0;
     padding: 0;
     animation: backgroundChange 10s ease-in-out infinite;
     border-radius: 5px;
-    border: 1px solid #000000;
+    border: 1px solid $black;
   }
 }
 
@@ -120,9 +127,8 @@ main {
   }
   &__index {
     box-sizing: border-box;
-    border: 1px solid #000000;
-    background-color: #ffff00;
-    border-radius: 25px;
+    @include borderRadius25px;
+    background-color: $yellow;
     height: 50px;
     width: 50px;
     display: flex;
@@ -132,7 +138,7 @@ main {
     font-size: 24px;
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
     &:hover {
-      background-color: #00ff00;
+      background-color: $green;
       transform: scale(1.15);
     }
   }
@@ -141,12 +147,11 @@ main {
   &__deleteBtn {
     height: 50px;
     width: 50px;
-    border: 1px solid #000000;
-    border-radius: 25px;
-    background-color: #00ff00;
+    @include borderRadius25px;
+    background-color: $green;
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
     &:hover {
-      background-color: #ffff00;
+      background-color: $yellow;
       transform: scale(1.15);
     }
   }

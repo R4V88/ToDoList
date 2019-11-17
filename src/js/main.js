@@ -14,7 +14,6 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-//Od Tego miejsca
 // importing moment library to fomate Date;
 import moment from 'moment';
 
@@ -27,22 +26,13 @@ addForm.addEventListener('submit', addItem);
 todoList.addEventListener('click', removeItem);
 search.addEventListener('keyup', searchItems);
 
-
 //Function to add item to the list
 function addItem(e) {
   e.preventDefault();
-  // createNewLi(todoList);
+  
   const item = createNewItem();
   todoList.appendChild(item);
 }
-
-// const createNewLi = (todoList) => {
-//   const item = createNewItem();
-
-//   todoList.appendChild(item);
-
-//   return todoList;
-// }
 const createNewItem = () => {
   const createItem = document.createElement('li');
   createItem.classList.add('todo__item');
@@ -70,7 +60,6 @@ const createNewWrapper = () => {
   createWrapper.appendChild(createDeleteBtn);
 
   return createWrapper;
-
 }
 const createNewIndex = () => {
   const createIndex = document.createElement('p');
@@ -108,11 +97,6 @@ const createNewDate = () => {
   createDate.appendChild(document.createTextNode(formatedDate));
   return createDate;
 }
-// const momentDate = function(){
-//   const date = new Date();
-//   const formatedDate = moment(date).format('L');
-//   return formatedDate;
-// }
 function removeItem(e) {
   if (e.target.classList.contains('todo__deleteBtn')) {
     if (confirm('Na pewno chcesz usunac ten element?')) {
@@ -122,7 +106,7 @@ function removeItem(e) {
   }
 }
 function searchItems (e) {
-  const text = e.target.value.toLowerCase;
+  const text = e.target.value.toLowerCase();
   Array.from(listItems).forEach((item) => {
     const itemTitle = item.firstElementChild.firstElementChild.nextElementSibling.textContent;
     if(itemTitle.toLowerCase().indexOf(text) != -1){
