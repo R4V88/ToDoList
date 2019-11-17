@@ -31,66 +31,18 @@ search.addEventListener('keyup', searchItems);
 //Function to add item to the list
 function addItem(e) {
   e.preventDefault();
-
-  // const title = document.getElementById('addForm__title').value;
-  // const content = document.getElementById('addForm__content').value;
-
-  // const createItem = document.createElement('li');
-  // createItem.classList.add('todo__item');
-  // createItem.setAttribute('id', 'todo__item');
-  // createNewItem();
-
-  // const createWrapper = document.createElement('div');
-  // createWrapper.classList.add('todo__wrapper');
-  // createNewWrapper();
-
-  // const createIndex = document.createElement('p');
-  // createIndex.className = 'todo__index';
-  // createIndex.appendChild(document.createTextNode(listItems).length + 1));
-  // createNewIndex();
-
-  // const createTitle = document.createElement('h1');
-  // createTitle.classList.add('todo__title');
-  // createTitle.appendChild(document.createTextNode(title));
-  // createNewTitle(title);
-
-  // const createDeleteBtn = document.createElement('button');
-  // createDeleteBtn.classList.add('todo__deleteBtn');
-  // createDeleteBtn.appendChild(document.createTextNode('X'));
-  // createNewDeleteBtn();
-
-  // const createContent = document.createElement('p');
-  // createContent.classList.add('todo__content');
-  // createContent.appendChild(document.createTextNode(content));
-  // createNewContent(content);
-
-  // const createDate = document.createElement('p');
-  // createDate.className = 'todo__date';
-  // createDate.appendChild(document.createTextNode(momentDate()));
-  // createNewDate(momentDate());
-
-  // createWrapper.appendChild(createIndex);
-  // createWrapper.appendChild(createTitle);
-  // createWrapper.appendChild(createDeleteBtn);
-  // createNewWrapper();
-
-  // createItem.appendChild(createWrapper);
-  // createItem.appendChild(createContent);
-  // createItem.appendChild(createDate);
-  // createNewItem();
-
-  // todoList.appendChild(createItem);
-
-  createNewLi(todoList);
-}
-
-const createNewLi = (todoList) => {
+  // createNewLi(todoList);
   const item = createNewItem();
-
   todoList.appendChild(item);
-
-  return todoList;
 }
+
+// const createNewLi = (todoList) => {
+//   const item = createNewItem();
+
+//   todoList.appendChild(item);
+
+//   return todoList;
+// }
 const createNewItem = () => {
   const createItem = document.createElement('li');
   createItem.classList.add('todo__item');
