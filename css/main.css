@@ -355,7 +355,7 @@ header {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding-bottom: 100px; }
+  margin-bottom: 100px; }
 
 .navigation {
   display: -webkit-box;
@@ -381,7 +381,12 @@ header {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .navigation__input {
-    width: 250px; }
+    width: 250px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 1px solid black; }
+  .navigation__searchBtn {
+    border-radius: 5px; }
   .navigation__title {
     font-size: 50px;
     text-transform: uppercase;
@@ -406,7 +411,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 100px; }
+  margin-bottom: 100px; }
 
 .addForm {
   width: 100%;
@@ -432,12 +437,19 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-bottom: 5px; }
+    margin-bottom: 5px; }
+  .addForm__title {
+    border-radius: 5px;
+    border: 1px solid black; }
+  .addForm__submitBtn {
+    border-radius: 5px; }
   .addForm__content {
     margin: 0;
     padding: 0;
     -webkit-animation: backgroundChange 10s ease-in-out infinite;
-            animation: backgroundChange 10s ease-in-out infinite; }
+            animation: backgroundChange 10s ease-in-out infinite;
+    border-radius: 5px;
+    border: 1px solid black; }
 
 .todo {
   width: 100%;
@@ -455,7 +467,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 15px; }
+    margin-bottom: 15px; }
   .todo__index {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
