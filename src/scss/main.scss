@@ -176,7 +176,7 @@ main {
     }
   }
   &__content {
-    margin: 0 15px;
+    margin: 0 50px;
     font-family: $lobsterFont;
   }
   &__date {
@@ -184,5 +184,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: $kanitFont;
+  }
+}
+.footer{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  &__author{
+    font-family: $kanitFont;
+    font-size: 10px;
   }
 }
