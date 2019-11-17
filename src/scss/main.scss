@@ -51,7 +51,8 @@ header {
   &__input {
     width: 250px;
     border-radius: 5px;
-    margin-right: 24px;
+    margin-right: 10px;
+    border: 1px solid black;
   }
   &__searchBtn {
     border-radius: 5px;
@@ -92,15 +93,18 @@ main {
   }
   &__title {
     border-radius: 5px;
+    border: 1px solid black;
   }
   &__submitBtn {
     border-radius: 5px;
+    // border: 1px solid black;
   }
   &__content {
     margin: 0;
     padding: 0;
     animation: backgroundChange 10s ease-in-out infinite;
     border-radius: 5px;
+    border: 1px solid black;
   }
 }
 

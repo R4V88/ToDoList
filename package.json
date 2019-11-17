@@ -49,5 +49,7 @@
       "@babel/preset-env"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
 }

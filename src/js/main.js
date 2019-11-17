@@ -25,12 +25,16 @@ let todolist = document.querySelector('.todo');
 let listitems = todolist.getElementsByClassName('todo__item');
 
 addForm.addEventListener('submit', addItem);
+todolist.addEventListener('click', removeItem);
 
 function addItem(e) {
   e.preventDefault();
 
   let title = document.getElementById('addForm__title').value;
   let content = document.getElementById('addForm__content').value;
+  let moment = require('moment');
+  let date = new Date();
+  let momentDate = moment(date).format('L');
 
   let createLi = document.createElement('li');
   createLi.classList.add('todo__item');
@@ -57,7 +61,7 @@ function addItem(e) {
 
   let createDate = document.createElement('p');
   createDate.className = 'todo__date';
-  createDate.appendChild(document.createTextNode('Tu bedzie data'));
+  createDate.appendChild(document.createTextNode(momentDate));
 
   createDiv.appendChild(createPos);
   createDiv.appendChild(createH1);
@@ -68,5 +72,14 @@ function addItem(e) {
   createLi.appendChild(createDate);
 
   todolist.appendChild(createLi);
+}
+
+function removeItem(e) {
+  if(e.target.classList.contains('todo__deleteBtn')){
+    if(confirm('Na pewno chcesz usunac ten element?')){
+      var element = e.target.parentElement.parentElement;
+      todolist.removeChild(element);
+    }
+  }
 }
 
