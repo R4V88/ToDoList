@@ -27,6 +27,8 @@ let listitems = todolist.getElementsByClassName('todo__item');
 addForm.addEventListener('submit', addItem);
 todolist.addEventListener('click', removeItem);
 
+//komentarz z dedykacja dla Martyny 'PullRequest' Strzempek :D
+
 function addItem(e) {
   e.preventDefault();
 
