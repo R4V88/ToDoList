@@ -15,16 +15,20 @@ if ('serviceWorker' in navigator) {
 }
 
 //Od Tego miejsca
-
+// importing moment library to fomate Date;
 import moment from 'moment';
 
 const addForm = document.querySelector('.addForm');
 const todolist = document.querySelector('.todo');
 const listitems = todolist.getElementsByClassName('todo__item');
+const search = document.querySelector('.navigation__input');
 
 addForm.addEventListener('submit', addItem);
 todolist.addEventListener('click', removeItem);
+search.addEventListener('keyup', searchItems);
 
+
+//Function to add item to the list
 function addItem(e) {
   e.preventDefault();
 
@@ -86,7 +90,7 @@ const createNewLi = (todolist) => {
   todolist.appendChild(item);
 
   return todolist;
-} 
+}
 const createNewItem = () => {
   const createItem = document.createElement('li');
   createItem.classList.add('todo__item');
@@ -114,9 +118,9 @@ const createNewWrapper = () => {
   createWrapper.appendChild(createDeleteBtn);
 
   return createWrapper;
-  
+
 }
-const createNewIndex = () =>{
+const createNewIndex = () => {
   const createIndex = document.createElement('p');
   createIndex.className = 'todo__index';
   createIndex.appendChild(document.createTextNode(listitems.length + 1));
@@ -165,6 +169,16 @@ function removeItem(e) {
     }
   }
 }
-
-
+function searchItems (e) {
+  const text = e.target.value.toLowerCase;
+  const items = listitems;
+  Array.from(items).forEach((item) => {
+    const itemTitle = item.firstElementChild.firstElementChild.nextElementSibling.textContent;
+    if(itemTitle.toLowerCase().indexOf(text) != -1){
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  })
+}
 
