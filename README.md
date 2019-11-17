@@ -1,5 +1,5 @@
 # Simple TODO list with adding/deleting/searching functions.
-Project Screenshot
+Project Screenshot\
 <img src="src/assets/img/ToDo_list.png"
      alt="ToDo List Screenshot"
      width="450" height="300" />
