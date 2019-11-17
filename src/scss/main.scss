@@ -1,6 +1,7 @@
 @import "_normalize";
 @import "_variables";
 @import "_mixins";
+@import url('https://fonts.googleapis.com/css?family=Kanit:400,700|Lobster&display=swap&subset=latin-ext');
 
 @keyframes backgroundChange {
   0% {
@@ -45,6 +46,7 @@ header {
   width: 100%;
   &__up{
     text-transform: uppercase;
+    font-family: $kanitFont;
     @include borderRadius25px;
     background: $gradientBackground;
     position: fixed;
@@ -55,6 +57,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: flex-start;
+    font-family: $lobsterFont;
   }
   &__input {
     width: 250px;
@@ -63,7 +66,8 @@ header {
     border: 1px solid $black;
   }
   &__title {
-    font-size: 50px;
+    font-size: 60px;
+    font-family: $kanitFont;
     text-transform: uppercase;
     letter-spacing: 5px;
     background: $gradientBackground;
@@ -99,9 +103,12 @@ main {
   &__title {
     border-radius: 5px;
     border: 1px solid $black;
+    font-family: $lobsterFont;
   }
   &__submitBtn {
     @include BorderRadius5px;
+    font-family: $kanitFont;
+    text-transform: uppercase;
     background: $gradientBackground;
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
     &:hover{
@@ -117,6 +124,7 @@ main {
     animation: backgroundChange 10s ease-in-out infinite;
     border-radius: 5px;
     border: 1px solid $black;
+    font-family: $lobsterFont;
   }
 }
 
@@ -135,6 +143,7 @@ main {
   }
   &__index {
     box-sizing: border-box;
+    font-family: $kanitFont;
     @include borderRadius25px;
     background-color: $yellow;
     height: 50px;
@@ -151,10 +160,13 @@ main {
     }
   }
   &__title {
+    font-family: $lobsterFont;
+    font-weight: bold;
   }
   &__deleteBtn {
     height: 50px;
     width: 50px;
+    font-family: $kanitFont;
     @include borderRadius25px;
     background-color: $green;
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -165,6 +177,7 @@ main {
   }
   &__content {
     margin: 0 15px;
+    font-family: $lobsterFont;
   }
   &__date {
     width: 100%;
