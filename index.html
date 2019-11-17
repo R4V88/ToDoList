@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>ToDo Lista</title>
+  <title>Gradiend ToDo Lista</title>
   <meta name="description" content="Description" />
   <link rel="stylesheet" href="css/main.css" />
 </head>
@@ -14,38 +14,37 @@
   <header>
     <navigation class="navigation">
       <div class="navigation__searchTool">
-        <input type="text" class="navigation__input" placeholder="Czego szukasz? Wpisz tytuł zadania">
-        <button class="navigation__searchBtn">Szukaj</button>
+        <input type="text" class="navigation__input navigation__input--js" placeholder="Czego szukasz? Wpisz tytuł zadania">
       </div>
       <h1 class="navigation__title">Gradient ToDo List</h1>
-      <!-- <button class="navigation__up">Do góry</button> -->
+      <button class="navigation__up navigation__up--js">Top</button>
     </navigation>
   </header>
 
   <body class="bodyGrid">
     <main>
       <div class="formWrapper">
-        <form class="addForm" id="addForm">
+        <form class="addForm addForm--js" id="addForm">
           <div class="addForm__inputsWrapper">
-            <input class="addForm__title" id="addForm__title" type="text" id="addForm__title" placeholder="Tytuł">
+            <input class="addForm__title addForm__title--js" type="text" placeholder="Tytuł">
             <input type="submit" class="addForm__submitBtn" value="Dopisz">
           </div>
-          <textarea class="addForm__content" id="addForm__content"momentDate cols="50" rows="8">
+          <textarea class="addForm__content addForm__content--js" id="addForm__content" cols="50" rows="8">
           </textarea>
         </form>
       </div>
       <section class="todosWrapper">
-        <ul class="todo" id="todo">
-          <li class="todo__item" id="todo__item">
-            <div class="todo__wrapper">
-              <p class="todo__index">1</p>
-              <h1 class="todo__title">pierwszy element</h1>
-              <button class="todo__deleteBtn">X</button>
+        <ul class="todo todo--js" id="todo">
+          <li class="todo__item todo__item--js">
+            <div class="todo__wrapper todo__wrapper--js">
+              <p class="todo__index todo__index--js">1</p>
+              <h1 class="todo__title todo__title--js">pierwszy element</h1>
+              <button class="todo__deleteBtn todo__deleteBtn--js">X</button>
             </div>
-            <p class="todo__content">Consequat nisi fugiat sunt ipsum fugiat pariatur magna nostrud fugiat nisi tempor
+            <p class="todo__content todo__content--js">Consequat nisi fugiat sunt ipsum fugiat pariatur magna nostrud fugiat nisi tempor
               minim. Nostrud est cillum id laboris incididunt enim. Ex est quis sunt veniam reprehenderit sint ipsum
               elit dolore. Nisi eu aliquip eu veniam aute anim labore pariatur officia in minim non.</p>
-            <p class="todo__date">Data</p>
+            <p class="todo__date todo__date--js">Data</p>
           </li>
         </ul>
       </section>

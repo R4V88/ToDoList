@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Kanit:400,700|Lobster&display=swap&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -372,6 +373,18 @@ header {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   width: 100%; }
+  .navigation__up {
+    text-transform: uppercase;
+    font-family: "Kanit", sans-serif;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
+    background: -webkit-linear-gradient(left, #ffff00, #00ff00);
+    background: -o-linear-gradient(left, #ffff00, #00ff00);
+    background: linear-gradient(to right, #ffff00, #00ff00);
+    position: fixed;
+    bottom: 100px;
+    right: 80px; }
   .navigation__searchTool {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -379,16 +392,16 @@ header {
     width: 100%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    font-family: "Lobster", cursive; }
   .navigation__input {
     width: 250px;
     border-radius: 5px;
     margin-right: 10px;
-    border: 1px solid black; }
-  .navigation__searchBtn {
-    border-radius: 5px; }
+    border: 1px solid #000000; }
   .navigation__title {
-    font-size: 50px;
+    font-size: 60px;
+    font-family: "Kanit", sans-serif;
     text-transform: uppercase;
     letter-spacing: 5px;
     background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
@@ -397,7 +410,7 @@ header {
     background: linear-gradient(to right, #ffff00, #00ff00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: #000000;
     -webkit-text-stroke-width: 1px; }
 
 main {
@@ -440,16 +453,36 @@ main {
     margin-bottom: 5px; }
   .addForm__title {
     border-radius: 5px;
-    border: 1px solid black; }
+    border: 1px solid #000000;
+    font-family: "Lobster", cursive; }
   .addForm__submitBtn {
-    border-radius: 5px; }
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-family: "Kanit", sans-serif;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
+    background: -webkit-linear-gradient(left, #ffff00, #00ff00);
+    background: -o-linear-gradient(left, #ffff00, #00ff00);
+    background: linear-gradient(to right, #ffff00, #00ff00);
+    -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out; }
+    .addForm__submitBtn:hover {
+      -webkit-transform: scale(1.15);
+          -ms-transform: scale(1.15);
+              transform: scale(1.15); }
+    .addForm__submitBtn:active {
+      background: #ffffff; }
   .addForm__content {
     margin: 0;
     padding: 0;
     -webkit-animation: backgroundChange 10s ease-in-out infinite;
             animation: backgroundChange 10s ease-in-out infinite;
     border-radius: 5px;
-    border: 1px solid black; }
+    border: 1px solid #000000;
+    font-family: "Lobster", cursive; }
 
 .todo {
   width: 100%;
@@ -471,9 +504,10 @@ main {
   .todo__index {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border: 1px solid black;
-    background-color: #ffff00;
+    font-family: "Kanit", sans-serif;
+    border: 1px solid #000000;
     border-radius: 25px;
+    background-color: #ffff00;
     height: 50px;
     width: 50px;
     display: -webkit-box;
@@ -497,10 +531,14 @@ main {
       -webkit-transform: scale(1.15);
           -ms-transform: scale(1.15);
               transform: scale(1.15); }
+  .todo__title {
+    font-family: "Lobster", cursive;
+    font-weight: bold; }
   .todo__deleteBtn {
     height: 50px;
     width: 50px;
-    border: 1px solid black;
+    font-family: "Kanit", sans-serif;
+    border: 1px solid #000000;
     border-radius: 25px;
     background-color: #00ff00;
     -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
@@ -514,7 +552,8 @@ main {
           -ms-transform: scale(1.15);
               transform: scale(1.15); }
   .todo__content {
-    margin: 0 15px; }
+    margin: 0 15px;
+    font-family: "Lobster", cursive; }
   .todo__date {
     width: 100%;
     display: -webkit-box;
