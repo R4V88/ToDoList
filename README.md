@@ -5,9 +5,12 @@
 
 
 Simple TODO list with adding/deleting/searching functions.\
-Technologies used: HTML5, CSS3, Vanilla JavaScript
+## Technologies used in project: 
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-# How to use Gulp
+### How to use Gulp:
 
 `npm install -g gulp-cli`
 
