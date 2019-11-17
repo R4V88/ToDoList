@@ -552,7 +552,7 @@ main {
           -ms-transform: scale(1.15);
               transform: scale(1.15); }
   .todo__content {
-    margin: 0 15px;
+    margin: 0 50px;
     font-family: "Lobster", cursive; }
   .todo__date {
     width: 100%;
@@ -564,6 +564,19 @@ main {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    font-family: "Kanit", sans-serif; }
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .footer__author {
+    font-family: "Kanit", sans-serif;
+    font-size: 10px; }
 
 /*# sourceMappingURL=main.css.map */
