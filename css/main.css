@@ -379,7 +379,6 @@ header {
     border: 1px solid #000000;
     border-radius: 25px;
     background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
-    background: -webkit-linear-gradient(left, #ffff00, #00ff00);
     background: -o-linear-gradient(left, #ffff00, #00ff00);
     background: linear-gradient(to right, #ffff00, #00ff00);
     position: fixed;
@@ -405,7 +404,6 @@ header {
     text-transform: uppercase;
     letter-spacing: 5px;
     background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
-    background: -webkit-linear-gradient(left, #ffff00, #00ff00);
     background: -o-linear-gradient(left, #ffff00, #00ff00);
     background: linear-gradient(to right, #ffff00, #00ff00);
     -webkit-background-clip: text;
@@ -461,7 +459,6 @@ main {
     font-family: "Kanit", sans-serif;
     text-transform: uppercase;
     background: -webkit-gradient(linear, left top, right top, from(#ffff00), to(#00ff00));
-    background: -webkit-linear-gradient(left, #ffff00, #00ff00);
     background: -o-linear-gradient(left, #ffff00, #00ff00);
     background: linear-gradient(to right, #ffff00, #00ff00);
     -webkit-transition: background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
@@ -567,6 +564,7 @@ main {
             align-items: center; }
   .todo__content {
     margin: 0 50px;
+    width: 500px;
     font-family: "Lobster", cursive; }
   .todo__checkboxesWrapper {
     margin-left: 50px;
