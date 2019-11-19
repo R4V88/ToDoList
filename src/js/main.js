@@ -113,7 +113,7 @@ const createCheckboxesWrapper = () => {
   const createRadioTodoInput = document.createElement('input');
   createRadioTodoInput.classList.add('todo__radioTodoInput', 'todo__radioTodoInput--js');
   createRadioTodoInput.setAttribute('type', 'radio');
-  createRadioTodoInput.setAttribute('name', 'checklist');
+  createRadioTodoInput.setAttribute('name', 'checklist' + listItems.length);
   const createRadioTodoLabel = document.createElement('label');
   createRadioTodoLabel.classList.add('todo__radioTodoLabel', 'todo__radioTodoLabel--js');
 
@@ -122,7 +122,7 @@ const createCheckboxesWrapper = () => {
   const createRadioDoneInput = document.createElement('input');
   createRadioDoneInput.classList.add('todo__radioDoneInput', 'todo__radioDoneInput--js');
   createRadioDoneInput.setAttribute('type', 'radio');
-  createRadioDoneInput.setAttribute('name', 'checklist');
+  createRadioDoneInput.setAttribute('name', 'checklist' + listItems.length);
   const createRadioDoneLabel = document.createElement('label');
   createRadioDoneLabel.classList.add('todo__radioDoneLabel', 'todo__radioDoneLabel--js');
 
@@ -133,7 +133,7 @@ const createCheckboxesWrapper = () => {
   createRadioDoneLabel.appendChild(document.createTextNode('Gotowe!'));
   createDoneCheckboxParagraph.appendChild(createRadioDoneInput);
   createDoneCheckboxParagraph.appendChild(createRadioDoneLabel);
-  
+
   createCheckBoxesWrapper.appendChild(createTodoCheckboxesParagraph);
   createCheckBoxesWrapper.appendChild(createDoneCheckboxParagraph);
 
