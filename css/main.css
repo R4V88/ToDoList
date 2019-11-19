@@ -551,9 +551,33 @@ main {
       -webkit-transform: scale(1.15);
           -ms-transform: scale(1.15);
               transform: scale(1.15); }
+  .todo__contentCheckboxWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .todo__content {
     margin: 0 50px;
     font-family: "Lobster", cursive; }
+  .todo__checkboxesWrapper {
+    margin-left: 50px;
+    max-width: 150px;
+    width: 100%; }
+  .todo__todoCheckbox {
+    max-width: 150px;
+    margin-right: 0; }
+  .todo__doneCheckbox {
+    max-width: 150px;
+    margin-right: 0; }
   .todo__date {
     width: 100%;
     display: -webkit-box;
