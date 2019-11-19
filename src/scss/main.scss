@@ -175,9 +175,28 @@ main {
       transform: scale(1.15);
     }
   }
+  &__contentCheckboxWrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
   &__content {
     margin: 0 50px;
     font-family: $lobsterFont;
+  }
+  &__checkboxesWrapper{
+    margin-left: 50px;
+    max-width: 150px;
+    width:100%;
+  }
+  &__todoCheckbox{
+    max-width: 150px;
+    margin-right: 0;
+  }
+  &__doneCheckbox{
+    max-width: 150px;
+    margin-right: 0;
   }
   &__date {
     width: 100%;

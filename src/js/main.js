@@ -41,11 +41,11 @@ const createNewItem = () => {
   createItem.classList.add('todo__item', 'todo__item--js');
 
   const createWrapper = createNewWrapper();
-  const createContent = createNewContent();
+  const createContentAndCheckboxesWrapper = createNewContentAndCheckboxesWrapper();
   const createDate = createNewDate();
 
   createItem.appendChild(createWrapper);
-  createItem.appendChild(createContent);
+  createItem.appendChild(createContentAndCheckboxesWrapper);
   createItem.appendChild(createDate);
 
   return createItem;
@@ -87,6 +87,58 @@ const createNewDeleteBtn = () => {
   createDeleteBtn.appendChild(document.createTextNode('X'));
   return createDeleteBtn;
 }
+const createNewContentAndCheckboxesWrapper = () => {
+  const createContentWithCheckboxes = document.createElement('div');
+
+  const checkboxesWrapper = createCheckboxesWrapper();
+  const createContent = createNewContent();
+
+  createContentWithCheckboxes.classList.add('todo__contentCheckboxWrapper', 'todo__contentCheckboxWrapper--js');
+  createContentWithCheckboxes.appendChild(createContent);
+  createContentWithCheckboxes.appendChild(checkboxesWrapper);
+
+  return createContentWithCheckboxes;
+}
+//Creates new Div with checkboxes
+const createCheckboxesWrapper = () => {
+  // const radioTodoLabel = document.querySelector('.todo__radioTodoLabel--js').value;
+  // const radioDoneLabel = document.querySelector('.todo__radioDoneLabel--js').value;
+
+  const createCheckBoxesWrapper = document.createElement('div');
+  createCheckBoxesWrapper.classList.add('todo__checkboxesWrapper', 'todo__checkboxesWrapper--js');
+
+  const createTodoCheckboxesParagraph = document.createElement('p');
+  createTodoCheckboxesParagraph.classList.add('todo__todoCheckboxParagraph', 'todo__todoCheckboxParagraph--js');
+
+  const createRadioTodoInput = document.createElement('input');
+  createRadioTodoInput.classList.add('todo__radioTodoInput', 'todo__radioTodoInput--js');
+  createRadioTodoInput.setAttribute('type', 'radio');
+  createRadioTodoInput.setAttribute('name', 'checklist');
+  const createRadioTodoLabel = document.createElement('label');
+  createRadioTodoLabel.classList.add('todo__radioTodoLabel', 'todo__radioTodoLabel--js');
+
+  const createDoneCheckboxParagraph = document.createElement('p');
+  createDoneCheckboxParagraph.classList.add('todo__doneCheckboxParagraph', 'todo__doneCheckboxParagraph--js');
+  const createRadioDoneInput = document.createElement('input');
+  createRadioDoneInput.classList.add('todo__radioDoneInput', 'todo__radioDoneInput--js');
+  createRadioDoneInput.setAttribute('type', 'radio');
+  createRadioDoneInput.setAttribute('name', 'checklist');
+  const createRadioDoneLabel = document.createElement('label');
+  createRadioDoneLabel.classList.add('todo__radioDoneLabel', 'todo__radioDoneLabel--js');
+
+  createRadioTodoLabel.appendChild(document.createTextNode('ToDO'));
+  createTodoCheckboxesParagraph.appendChild(createRadioTodoInput);
+  createTodoCheckboxesParagraph.appendChild(createRadioTodoLabel);
+
+  createRadioDoneLabel.appendChild(document.createTextNode('Gotowe!'));
+  createDoneCheckboxParagraph.appendChild(createRadioDoneInput);
+  createDoneCheckboxParagraph.appendChild(createRadioDoneLabel);
+  
+  createCheckBoxesWrapper.appendChild(createTodoCheckboxesParagraph);
+  createCheckBoxesWrapper.appendChild(createDoneCheckboxParagraph);
+
+  return createCheckBoxesWrapper;
+}
 //Creates new paragraph inside List Item
 const createNewContent = () => {
   const content = document.querySelector('.addForm__content--js').value;
@@ -115,11 +167,11 @@ function removeItem(e) {
   }
 }
 //Searches chosen title
-function searchItems (e) {
+function searchItems(e) {
   const text = e.target.value.toLowerCase();
   Array.from(listItems).forEach((item) => {
     const itemTitle = item.firstElementChild.firstElementChild.nextElementSibling.textContent;
-    if(itemTitle.toLowerCase().indexOf(text) != -1){
+    if (itemTitle.toLowerCase().indexOf(text) != -1) {
       item.style.display = 'block';
     } else {
       item.style.display = 'none';
@@ -128,7 +180,7 @@ function searchItems (e) {
 }
 //Goes to top of the page
 function goToTop(e) {
-  if(e.target.classList.contains('navigation__up--js')){
+  if (e.target.classList.contains('navigation__up--js')) {
     document.documentElement.scrollTop = 0;
   }
 }

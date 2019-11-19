@@ -14,7 +14,8 @@
   <header>
     <navigation class="navigation">
       <div class="navigation__searchTool">
-        <input type="text" class="navigation__input navigation__input--js" placeholder="Czego szukasz? Wpisz tytuł zadania">
+        <input type="text" class="navigation__input navigation__input--js"
+          placeholder="Czego szukasz? Wpisz tytuł zadania">
       </div>
       <h1 class="navigation__title">Gradient ToDo List</h1>
       <button class="navigation__up navigation__up--js">Top</button>
@@ -41,9 +42,23 @@
               <h1 class="todo__title todo__title--js">pierwszy element</h1>
               <button class="todo__deleteBtn todo__deleteBtn--js">X</button>
             </div>
-            <p class="todo__content todo__content--js">Consequat nisi fugiat sunt ipsum fugiat pariatur magna nostrud fugiat nisi tempor
-              minim. Nostrud est cillum id laboris incididunt enim. Ex est quis sunt veniam reprehenderit sint ipsum
-              elit dolore. Nisi eu aliquip eu veniam aute anim labore pariatur officia in minim non.</p>
+            <div class="todo__contentCheckboxWrapper todo__contentCheckboxWrapper--js">
+              <p class="todo__content todo__content--js">Consequat nisi fugiat sunt ipsum fugiat pariatur magna nostrud
+                fugiat nisi tempor
+                minim. Nostrud est cillum id laboris incididunt enim. Ex est quis sunt veniam reprehenderit sint ipsum
+                elit dolore. Nisi eu aliquip eu veniam aute anim labore pariatur officia in minim non.
+              </p>
+              <div class="todo__checkboxesWrapper todo__checkboxesWrapper--js">
+                <p class="todo__todoCheckboxParagraph todo__todoCheckboxParagraph--js">
+                  <input  class="todo__radioTodoInput todo__radioTodoInput--js" type="radio" name="checklist" value="todo" checked>
+                  <label class="todo__radioTodoLabel todo__radioTodoLabel--js" for="todo">ToDo</label>
+                </p>
+                <p class="todo__doneCheckboxParagraph todo__doneCheckboxParagraph--js">
+                  <input class="todo__radioDoneInput todo__radioDoneInput--js" type="radio"  name="checklist" value="done">
+                  <label class="todo__radioDoneLabel todo__radioDoneLabel--js" for="done">Gotowe!</label>
+                </p>
+              </div>
+            </div>
             <p class="todo__date todo__date--js">Data</p>
           </li>
         </ul>
@@ -51,7 +66,7 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__author">R.S. 17.11.2019</p>
+      <p class="footer__author">R.S. 17.11.2019</p>
     </footer>
     <script src="js/main.js"></script>
   </body>
